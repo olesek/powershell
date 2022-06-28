@@ -1,0 +1,2 @@
+git config --global user.email "joe@rattle.net"
+git config --global user.name "Joe Oleszczuk"
