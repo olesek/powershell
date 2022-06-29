@@ -27,8 +27,8 @@ read-host Ready to begin Inital Program Load - Press ENTER to continue...
 Install-Module -Name WinGet
 
 # Install Winget Packages
-winget install firefox
-winget install Google Chrome
+winget install mozilla.firefox
+winget install google.chrome
 
 # Update PC
 Install-Module -Name PSWindowsUpdate -Force
