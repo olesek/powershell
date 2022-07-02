@@ -7,6 +7,8 @@
 
 # https://www.powershellgallery.com/
 
+# https://www.powershellgallery.com/packages/ComputerManagementDsc/8.6.0-preview0002
+
 # Clear Terminal Window
 Clear
 
