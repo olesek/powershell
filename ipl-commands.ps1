@@ -1,13 +1,16 @@
-# PC Install Script!
+# PS Install Script!
 
 # *********************
 # Note: ExecutionPolicy MUST be set in PowerShell to "RemoteSigned" = "A"
 # Run "Set-ExecutionPolicy -ExecutionPolicy RemoteSigned" as administrator and selcet "A"
 # *********************
-
+#
+# Resources:
 # https://www.powershellgallery.com/
-
+#
 # https://www.powershellgallery.com/packages/ComputerManagementDsc/8.6.0-preview0002
+#
+
 
 # Clear Terminal Window
 Clear
@@ -27,6 +30,8 @@ read-host Ready to begin Inital Program Load - Press ENTER to continue...
 
 # Install Winget
 Install-Module -Name WinGet
+Install-Module -Name winget
+
 
 # Install Winget Packages
 winget install mozilla.firefox -s winget -h --accept-package-agreements
