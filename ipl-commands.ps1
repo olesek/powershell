@@ -59,3 +59,6 @@ C:\Users\techadmin\Desktop\ipl\.\InstallChrome.ps1
 C:\Users\techadmin\Desktop\ipl\.\"Remote Access-windows64-online.exe"
 
 Write-Host ALL DONE!!!
+
+# SimpleHelp
+104.131.160.224
