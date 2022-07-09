@@ -17,3 +17,4 @@ if ( $condition )
 }
 
 #wget "https://raw.githubusercontent.com/olesek/powershell/main/if.ps1" -outfile "if.ps1"
+get-windowsupdate
