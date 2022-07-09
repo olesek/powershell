@@ -4,7 +4,7 @@ if ( $condition )
 {
     Write-Output "The condition was true"
 }
-#>
+
 
 # test if condition
 
@@ -25,9 +25,11 @@ if ( 5 -eq $value )
 {
     # do something
 }
-
+#>
 $value = Get-WURebootStatus
-if ( 5 -eq $value )
+Write-Output $value
+if ( 5 -eq $true )
 {
-    Write-Output $value
+    Write-Output "true"
 }
+Write-Output "false"
