@@ -17,4 +17,17 @@ if ( $condition )
 }
 
 #wget "https://raw.githubusercontent.com/olesek/powershell/main/if.ps1" -outfile "if.ps1"
-get-windowsupdate
+#get-windowsupdate
+
+Get-WURebootStatus
+$value = Get-MysteryValue
+if ( 5 -eq $value )
+{
+    # do something
+}
+
+$value = Get-WURebootStatus
+if ( 5 -eq $value )
+{
+    Write-Output $value
+}
