@@ -16,4 +16,4 @@ if ( $condition )
     Write-Output "The condition was true"
 }
 
-#
+#wget "https://raw.githubusercontent.com/olesek/powershell/main/if.ps1" -outfile "if.ps1"
