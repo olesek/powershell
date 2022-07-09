@@ -44,3 +44,8 @@ if (Get-Module -ListAvailable -Name "PSWindowsUpdate") {
 else {
     Write-Host "Module does not exist"
 }
+
+# Show Time
+
+
+# Show Date
