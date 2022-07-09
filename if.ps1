@@ -26,6 +26,8 @@ if ( 5 -eq $value )
     # do something
 }
 #>
+
+<#
 $value = Get-WURebootStatus
 Write-Output $value
 if ( 5 -eq $true )
@@ -33,9 +35,10 @@ if ( 5 -eq $true )
     Write-Output "true"
 }
 Write-Output "false"
+#>
 
 # Check to see if PSWindowsUpdate is installed
-if (Get-Module -ListAvailable -Name PSWindowsUpdate) {
+if (Get-Module -ListAvailable -Name "PSWindowsUpdate") {
     Write-Host "Module exists"
 } 
 else {
