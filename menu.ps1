@@ -11,7 +11,7 @@ switch ($a){
     3{Install-WindowsUpdate -AcceptAll -AutoReboot}
     4{function Get-Version}
 }
- {
+function Get-Version {
     $PSVersionTable.PSVersion
 }
 Write-Host $a
