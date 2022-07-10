@@ -1,4 +1,15 @@
 clear
+
+
+function Get-V
+{
+    [CmdletBinding()]
+    
+    $PSVersionTable.PSVersion
+}
+
+
+
 $a=Read-Host -Prompt "
 `n1. Show day of the week
 `n2. Show year
@@ -9,9 +20,7 @@ switch ($a){
     1{Get-Date -UFormat %A}
     2{Get-Date -UFormat %Y}
     3{Install-WindowsUpdate -AcceptAll -AutoReboot}
-    4{function Get-Version}
+    4{function GV}
 }
-function Get-Version {
-    $PSVersionTable.PSVersion
-}
-Write-Host $a
+
+Write-Output $a
