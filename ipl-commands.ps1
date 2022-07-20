@@ -38,7 +38,7 @@ winget install mozilla.firefox -s winget -h --accept-package-agreements
 winget install google.chrome -s winget -h --accept-package-agreements
 
 # Update PC
-Install-PackageProvider -Name NuGet Force
+Install-PackageProvider -Name NuGet -Force
 Install-Module -Name PSWindowsUpdate -Force
 Import-Module PSWindowsUpdate
 Get-Command -Module PSWindowsUpdate
