@@ -1,8 +1,9 @@
 # Install Chrome
 # Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 
-mkdir c:\ps
-cd cd:\ps
+# mkdir c:\ps
+# cd cd:\ps
+
 Invoke-WebRequest -uri 'http://dl.google.com/chrome/install/375.126/chrome_installer.exe' -OutFile "C:\ps\chrome_installer.exe"
 Start-Process "C:\ps\chrome_installer.exe" -ArgumentList "/silent /install" -Wait
 
