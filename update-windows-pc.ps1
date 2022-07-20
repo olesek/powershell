@@ -1,3 +1,6 @@
+# Run "Set-ExecutionPolicy -ExecutionPolicy RemoteSigned" as administrator and selcet "A"
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
+
 # Update PC - these commands only need to be run 1 time
 Install-PackageProvider -Name NuGet -Force
 Install-Module -Name PSWindowsUpdate -Force
