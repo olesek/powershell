@@ -1,4 +1,4 @@
-// Last modified: 2022/07/21 14:39:28
+// Last modified: 2022/07/21 14:44:34
 
 # This script originated from:
 # https://techexpert.tips/powershell/powershell-creating-user-menu/
@@ -76,8 +76,8 @@ function DisplayMenu {
     |    3) SET PC NAME & TIME ZONE                   |
     |    4) INSTALL GOOGLE CHROME                     |
     |    5) INSTALL GOOGLE CREDENTIAL PROVIDER FOR WINDOWS|
-    |    6)  DOGS & CATS & BEARS                           |
-    |    7) UPGRADE THIS SCRIPT                 |
+    |    6)                                           |
+    |    7) UPGRADE THIS SCRIPT                       |
     |    8) EXIT                                      |
     +=================================================+
 "@
