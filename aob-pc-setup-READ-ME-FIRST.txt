@@ -21,12 +21,6 @@ Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 
 mkdir c:\ps;cd c:\ps;wget "https://raw.githubusercontent.com/olesek/powershell/main/aob-pc-setup.ps1" -outfile "c:\ps\aob-pc-setup.ps1";./aob-pc-setup.ps1
 
-************************************
-* Command #4:                      *
-************************************
-
-wget "https://raw.githubusercontent.com/olesek/powershell/main/aob-gcpw.ps1" -outfile "c:\ps\aob-gcpw.ps1";cd c:\ps;./aob-gcpw.ps1
-
 
 
 NOTE: after running Command #3, if you need to access the AOB POWERSHELL CONSOLE menu again:
