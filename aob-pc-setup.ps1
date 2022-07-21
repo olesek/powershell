@@ -1,4 +1,4 @@
-// Last modified: 2022/07/21 15:27:52
+// Last modified: 2022/07/21 15:32:42
 
 # This script originated from:
 # https://techexpert.tips/powershell/powershell-creating-user-menu/
@@ -30,7 +30,7 @@ function AOB-Install-GoogleChrome {
 
 function AOB-Install-GCPW {
     wget "https://raw.githubusercontent.com/olesek/powershell/main/aob-gcpw.ps1" -outfile "c:\ps\aob-gcpw.ps1"
-    ./aob-gcpw.ps1
+    .c:\ps\aob-gcpw.ps1
 }
 
 function Set-PC-Name-and-TimeZone {
