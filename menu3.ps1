@@ -12,6 +12,10 @@ Import-Module PSWindowsUpdate
 Get-Command -Module PSWindowsUpdate
 Get-WindowsUpdate
 }
+function AOB-Update-Windows {
+    # Update PC - these commands only need to be run 1 time
+       Get-WindowsUpdate
+    }
 function vader {
     Get-ChildItem   
 }
@@ -52,8 +56,8 @@ function DisplayMenu {
     }
     2 {
     #OPTION2 - DISPLAY MESSAGE
-    $OPTION2 = Read-Host "MESSAGE"
-    Write-Host "MESSAGE: $OPTION2"
+    $OPTION2 = AOB-Update-Windows
+    # Write-Host "MESSAGE: $OPTION2"
     Start-Sleep -Seconds 2
     DisplayMenu
     }
