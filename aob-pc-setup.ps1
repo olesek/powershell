@@ -1,4 +1,4 @@
-// Last modified: 2022/07/21 14:44:34
+// Last modified: 2022/07/21 15:27:52
 
 # This script originated from:
 # https://techexpert.tips/powershell/powershell-creating-user-menu/
@@ -43,17 +43,8 @@ function Set-PC-Name-and-TimeZone {
     Write-Host Setting Time Zone to Eastern Standard Time
     Set-TimeZone -Name "Eastern Standard Time"
     Write-Host
-    Write-Host Time Zone set to:
-    Get-TimeZone
-    read-host Ready to begin Inital Program Load - Press ENTER to continue...
-    
+    Write-Host "Time Zone set to:" Get-TimeZone 
 }
-
-
-
-
-
-
 
 function vader {
     Get-ChildItem   
@@ -65,21 +56,21 @@ function DisplayMenu {
     Clear-Host
     Write-Host @"
   
-    +=================================================+
-    |             AOB POWERSHELL CONSOLE              |
-    |            REBOOT REQUIRED: $reboot             |
-    +=================================================+
-    |                                                 |
-    |    1) INSTALL WINDOW'S UPDATER                  |
-    |       (this option only needs to be run 1 time) |
-    |    2) RUN WINDOW'S UPDATER                      |
-    |    3) SET PC NAME & TIME ZONE                   |
-    |    4) INSTALL GOOGLE CHROME                     |
-    |    5) INSTALL GOOGLE CREDENTIAL PROVIDER FOR WINDOWS|
-    |    6)                                           |
-    |    7) UPGRADE THIS SCRIPT                       |
-    |    8) EXIT                                      |
-    +=================================================+
+    +==========================================================+
+    |             AOB POWERSHELL CONSOLE                       |
+    |            REBOOT REQUIRED: $reboot                      |
+    +==========================================================+
+    |                                                          |
+    |    1) INSTALL WINDOW'S UPDATER                           |
+    |       (this option only needs to be run 1 time)          |
+    |    2) RUN WINDOW'S UPDATER                               |
+    |    3) SET PC NAME & TIME ZONE                            |
+    |    4) INSTALL GOOGLE CHROME                              |
+    |    5) INSTALL GOOGLE CREDENTIAL PROVIDER FOR WINDOWS     |
+    |    6)                                                    |
+    |    7) UPGRADE THIS SCRIPT                                |
+    |    8) EXIT                                               |
+    +==========================================================+
 "@
 Write-Host Last modified
     
@@ -103,7 +94,7 @@ Write-Host Last modified
         3 {
             #OPTION3 - SET PC NAME & TIME ZONE
             Write-Host "Setting PC Name and TimeZone"
-            $OPTION2 = Set-PC-Name-and-TimeZone
+            $OPTION3 = Set-PC-Name-and-TimeZone
             Start-Sleep -Seconds 2
             DisplayMenu
         }
