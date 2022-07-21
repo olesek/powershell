@@ -1,4 +1,4 @@
-// Last modified: 2022/07/21 14:10:42
+// Last modified: 2022/07/21 14:19:14
 
 # This script originated from:
 # https://techexpert.tips/powershell/powershell-creating-user-menu/
@@ -26,6 +26,12 @@ function AOB-Install-GoogleChrome {
     Start-Process "C:\ps\chrome_installer.exe" -ArgumentList "/silent /install" -Wait
 }
 
+
+
+function AOB-Install-GCPW {
+    wget "https://raw.githubusercontent.com/olesek/powershell/main/aob-gcpw.ps1" -outfile "c:\ps\aob-gcpw.ps1"
+    ./aob-gcpw.ps1
+}
 
 function Set-PC-Name-and-TimeZone {
     # Set PC Name
@@ -112,7 +118,8 @@ Write-Host Last modified
         5 {
             #OPTION5 - EMPTY
             $OPTION2 = Read-Host "MESSAGE"
-            Write-Host "MESSAGE: $OPTION2"
+            Write-Host "Installing Google Credential Provider for Windows"
+            AOB-Install-GCPW
             Start-Sleep -Seconds 2
             DisplayMenu
         }
