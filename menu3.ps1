@@ -1,5 +1,9 @@
 # This script originated from:
 # https://techexpert.tips/powershell/powershell-creating-user-menu/
+<#
+wget "https://raw.githubusercontent.com/olesek/powershell/main/menu3.ps1" -outfile "c:\ps\menu3.ps1"
+#>
+
 
 function vader {
     Get-ChildItem
