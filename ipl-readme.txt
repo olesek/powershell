@@ -1,1 +1,0 @@
-mkdir c:\ps;cd c:\ps;wget "https://raw.githubusercontent.com/olesek/powershell/main/update-windows-pc.ps1" -outfile "c:\ps\update-windows-pc.ps1"

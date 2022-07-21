@@ -1,1 +1,30 @@
-mkdir c:\ps;cd c:\ps;wget "https://raw.githubusercontent.com/olesek/powershell/main/aob-pc-setup.ps1" -outfile "c:\ps\aob-pc-setup.ps1"
+NOTE:
+1) Launch PowerShell running in Administrtor Mode
+2) Copy and Paste the commands from below
+   answer "A" when it prompts you for permission
+
+************************************
+* Command #1:                      *
+************************************
+
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
+
+************************************
+* Command #2:                      *
+************************************
+
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+
+************************************
+* Command #3:                      *
+************************************
+
+mkdir c:\ps;cd c:\ps;wget "https://raw.githubusercontent.com/olesek/powershell/main/aob-pc-setup.ps1" -outfile "c:\ps\aob-pc-setup.ps1";./aob-pc-setup.ps1
+
+
+NOTE: after running Command #3, if you need to access the AOB POWERSHELL CONSOLE menu again:
+1) Launch PowerShell running in Administrtor Mode
+2) Navigate to the "ps" directory by typing:
+   c:\ps
+3 Launch the AOB POWERSHELL CONSOLE by tying:
+   ./aob-pc-setup.ps1
