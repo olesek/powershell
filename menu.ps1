@@ -1,3 +1,9 @@
+<#
+resources
+https://adamtheautomator.com/powershell-menu/
+#>
+
+
 clear
 
 
