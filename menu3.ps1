@@ -6,11 +6,7 @@ wget "https://raw.githubusercontent.com/olesek/powershell/main/menu3.ps1" -outfi
 
 
 function vader {
-    Get-ChildItem
-    param (
-        OptionalParameters
-    )
-    
+    Get-ChildItem   
 }
 
 function DisplayMenu {
