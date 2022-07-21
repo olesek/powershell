@@ -1,0 +1,1 @@
+mkdir c:\ps;cd c:\ps;wget "https://raw.githubusercontent.com/olesek/powershell/main/aob-pc-setup.ps1" -outfile "c:\ps\aob-pc-setup.ps1"
