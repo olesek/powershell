@@ -93,7 +93,7 @@ function DisplayMenu {
     #OPTION7 - DEBUG
     $OPTION2 = type c:\ps\menu3.ps1
     Write-Host "MESSAGE: $OPTION2"
-    Start-Sleep -Seconds 2
+    Start-Sleep -Seconds 10
     DisplayMenu
     }
     8 {
