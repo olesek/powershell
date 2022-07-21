@@ -15,7 +15,7 @@ Get-WindowsUpdate
 function AOB-Update-Windows {
     # Update PC - these commands only need to be run 1 time
        Get-WindowsUpdate
-    }
+}
 
 function AOB-Install-GoogleChrome {
 #    New-Item -Path 'c:\ps' -ItemType Directory
@@ -23,6 +23,28 @@ function AOB-Install-GoogleChrome {
     Invoke-WebRequest -uri 'http://dl.google.com/chrome/install/375.126/chrome_installer.exe' -OutFile "C:\ps\chrome_installer.exe"
     Start-Process "C:\ps\chrome_installer.exe" -ArgumentList "/silent /install" -Wait
 }
+
+
+function Set-PC-Name-and-TimeZone {
+# Set PC Name
+$pcname = Read-Host "Enter PC Name"
+Rename-Computer -NewName $pcname
+Write-Host pc will be renamed $pcname
+
+# Set Time Zone
+Write-Host Setting Time Zone to Eastern Standard Time
+Set-TimeZone -Name "Eastern Standard Time"
+Write-Host
+Write-Host Time Zone set to:
+Get-TimeZone
+read-host Ready to begin Inital Program Load - Press ENTER to continue...
+    
+}
+
+
+
+
+
 
 
 function vader {
