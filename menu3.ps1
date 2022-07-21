@@ -4,7 +4,14 @@
 wget "https://raw.githubusercontent.com/olesek/powershell/main/menu3.ps1" -outfile "c:\ps\menu3.ps1"
 #>
 
-
+function AOB-Install-WindowsUpdate {
+# Update PC - these commands only need to be run 1 time
+Install-PackageProvider -Name NuGet -Force
+Install-Module -Name PSWindowsUpdate -Force
+Import-Module PSWindowsUpdate
+Get-Command -Module PSWindowsUpdate
+Get-WindowsUpdate
+}
 function vader {
     Get-ChildItem   
 }
@@ -29,9 +36,9 @@ function DisplayMenu {
     {
     1 {
     #OPTION1 - PING
-    $OPTION1 = vader
+    $OPTION1 = AOB-Install-WindowsUpdate
     # Test-Connection -ComputerName $OPTION1
-    vader
+    AOB-Install-WindowsUpdate
     Start-Sleep -Seconds 2
     DisplayMenu
     }
