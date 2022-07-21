@@ -29,7 +29,7 @@ function DisplayMenu {
     |    1) Install Window's Updater
             ( (this option only need to be run 1 time))
     |    2) DISPLAY MESSAGE                         |
-    |    3) EXIT                                    |
+    |    7) EXIT                                    |
     +===============================================+
 
 "@
@@ -73,14 +73,14 @@ function DisplayMenu {
     Start-Sleep -Seconds 2
                     DisplayMenu
     }
-    2 {
+    6 {
     #OPTION2 - DISPLAY MESSAGE
     $OPTION2 = Read-Host "MESSAGE"
     Write-Host "MESSAGE: $OPTION2"
     Start-Sleep -Seconds 2
     DisplayMenu
     }
-    3 {
+    7 {
     #OPTION3 - EXIT
     Write-Host "Bye"
     Break
