@@ -20,9 +20,10 @@ $reboot = YES
 
 function DisplayMenu {
     Clear-Host
+    Write-Host "REBOOT REQUIRED: $reboot"      
     Write-Host @"
     +===============================================+
-    |  AOB POWERSHELL CONSOLE    $reboot                    | 
+    |  AOB POWERSHELL CONSOLE                  | 
     +===============================================+
     |                                               |
     |    1) Install Window's Updater
