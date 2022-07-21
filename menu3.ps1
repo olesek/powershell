@@ -16,11 +16,16 @@ function vader {
     Get-ChildItem   
 }
 
-$reboot = YES
+$reboot = "YES"
 
 function DisplayMenu {
     Clear-Host
-    Write-Host "REBOOT REQUIRED: $reboot"      
+    Write-Host @"
+    +
+    +    REBOOT REQUIRED: $reboot
+    +
+    @"
+
     Write-Host @"
     +===============================================+
     |  AOB POWERSHELL CONSOLE                  | 
