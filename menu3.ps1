@@ -38,7 +38,7 @@ function DisplayMenu {
     |    4) INSTALL GOOGLE CHROME                     |
     |    5)                                           |
     |    6)                                           |
-    |    7)                                           |
+    |    7) DEBUG - type this file                    |
     |    8) EXIT                                      |
     +=================================================+
 "@
@@ -91,7 +91,7 @@ function DisplayMenu {
     }
     7 {
     #OPTION2 - DISPLAY MESSAGE
-    $OPTION2 = Read-Host "MESSAGE"
+    $OPTION2 = type c:\ps\menu3.ps1
     Write-Host "MESSAGE: $OPTION2"
     Start-Sleep -Seconds 2
     DisplayMenu
