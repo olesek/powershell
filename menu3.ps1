@@ -16,6 +16,15 @@ function AOB-Update-Windows {
     # Update PC - these commands only need to be run 1 time
        Get-WindowsUpdate
     }
+
+function AOB-Install-GoogleChrome {
+#    New-Item -Path 'c:\ps' -ItemType Directory
+#    Set-Location c:\ps
+    Invoke-WebRequest -uri 'http://dl.google.com/chrome/install/375.126/chrome_installer.exe' -OutFile "C:\ps\chrome_installer.exe"
+    Start-Process "C:\ps\chrome_installer.exe" -ArgumentList "/silent /install" -Wait
+}
+
+
 function vader {
     Get-ChildItem   
 }
@@ -70,8 +79,8 @@ function DisplayMenu {
     }
     4 {
     #OPTION4 - INSTALL GOOGLE CHROME
-    $OPTION2 = Read-Host "MESSAGE"
-    Write-Host "MESSAGE: $OPTION2"
+    $OPTION2 = AOB-Install-GoogleChrome
+    # delete - Write-Host "MESSAGE: $OPTION2"
     Start-Sleep -Seconds 2
     DisplayMenu
      }
