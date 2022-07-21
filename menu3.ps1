@@ -21,22 +21,17 @@ $reboot = "unknown"
 function DisplayMenu {
     Clear-Host
     Write-Host @"
-    +
-    +
-    +    REBOOT REQUIRED: $reboot
-    +
-    +
-    +===============================================+
-    |  AOB POWERSHELL CONSOLE   
-    REBOOT REQUIRED: $reboot               | 
-    +===============================================+
-    |                                               |
+  
+    +=================================================+
+    |             AOB POWERSHELL CONSOLE              |
+    |            REBOOT REQUIRED: $reboot             |
+    +=================================================+
+    |                                                 |
     |    1) Install Window's Updater
-            ( (this option only need to be run 1 time))
-    |    2) DISPLAY MESSAGE                         |
-    |    7) EXIT                                    |
-    +===============================================+
-
+            (this option only needs to be run 1 time) |
+    |    2) DISPLAY MESSAGE                           |
+    |    7) EXIT                                      |
+    +=================================================+
 "@
     
     $MENU = Read-Host "OPTION"
