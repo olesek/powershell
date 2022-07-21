@@ -94,8 +94,8 @@ function DisplayMenu {
     }
     3 {
     #OPTION3 - SET PC NAME & TIME ZONE
-    $OPTION2 = Read-Host "MESSAGE"
-    Write-Host "MESSAGE: $OPTION2"
+    Write-Host "Setting PC Name and TimeZone"
+    $OPTION2 = Set-PC-Name-and-TimeZone
     Start-Sleep -Seconds 2
     DisplayMenu
     }
