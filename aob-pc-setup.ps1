@@ -1,4 +1,4 @@
-// Last modified: 2022/07/21 14:19:14
+// Last modified: 2022/07/21 14:26:31
 
 # This script originated from:
 # https://techexpert.tips/powershell/powershell-creating-user-menu/
@@ -75,7 +75,7 @@ function DisplayMenu {
     |    2) RUN WINDOW'S UPDATER                      |
     |    3) SET PC NAME & TIME ZONE                   |
     |    4) INSTALL GOOGLE CHROME                     |
-    |    5)                                           |
+    |    5) INSTALL GOOGLE CREDENTIAL PROVIDER FOR WINDOWS|
     |    6)                                           |
     |    7) UPGRADE THIS SCRIPT                 |
     |    8) EXIT                                      |
@@ -132,8 +132,7 @@ Write-Host Last modified
         }
         7 {
             #OPTION7 - UPGRADE THIS SCRIPT
-            $OPTION7 = type c:\ps\menu3.ps1
-            wget "https://raw.githubusercontent.com/olesek/powershell/main/aob-pc-setup.ps1" -outfile "c:\ps\aob-pc-setup.ps1"
+            $OPTION7 = wget "https://raw.githubusercontent.com/olesek/powershell/main/aob-pc-setup.ps1" -outfile "c:\ps\aob-pc-setup.ps1"
             Start-Sleep -Seconds 10
             DisplayMenu
         }
