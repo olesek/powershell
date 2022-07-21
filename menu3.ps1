@@ -27,10 +27,15 @@ function DisplayMenu {
     |            REBOOT REQUIRED: $reboot             |
     +=================================================+
     |                                                 |
-    |    1) Install Window's Updater
-            (this option only needs to be run 1 time) |
-    |    2) DISPLAY MESSAGE                           |
-    |    7) EXIT                                      |
+    |    1) INSTALL WINDOW'S UPDATER                  |
+    |       (this option only needs to be run 1 time) |
+    |    2) RUN WINDOW'S UPDATER                      |
+    |    3) SET PC NAME & TIME ZONE                   |
+    |    4) INSTALL GOOGLE CHROME                     |
+    |    5)                                           |
+    |    6)                                           |
+    |    7)                                           |
+    |    8) EXIT                                      |
     +=================================================+
 "@
     
@@ -81,6 +86,13 @@ function DisplayMenu {
     DisplayMenu
     }
     7 {
+    #OPTION2 - DISPLAY MESSAGE
+    $OPTION2 = Read-Host "MESSAGE"
+    Write-Host "MESSAGE: $OPTION2"
+    Start-Sleep -Seconds 2
+    DisplayMenu
+    }
+    8 {
     #OPTION3 - EXIT
     Write-Host "Bye"
     Break
