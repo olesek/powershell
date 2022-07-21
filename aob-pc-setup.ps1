@@ -1,4 +1,4 @@
-// Last modified: 2022/07/21 14:34:28
+// Last modified: 2022/07/21 14:35:12
 
 # This script originated from:
 # https://techexpert.tips/powershell/powershell-creating-user-menu/
@@ -132,7 +132,7 @@ Write-Host Last modified
         }
         7 {
             #OPTION7 - UPGRADE THIS SCRIPT
-            $OPTION7 = wget "https://raw.githubusercontent.com/olesek/powershell/main/aob-pc-setup.ps1" -outfile "c:\ps\aob-pc-setup.ps1";c:\ps\aob-pc-setup.ps1
+            $OPTION7 = wget "https://raw.githubusercontent.com/olesek/powershell/main/aob-pc-setup.ps1" -outfile "c:\ps\aob-pc-setup.ps1";c:\ps\./aob-pc-setup.ps1
             Start-Sleep -Seconds 10
             DisplayMenu
         }
