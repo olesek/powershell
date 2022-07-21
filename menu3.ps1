@@ -16,19 +16,19 @@ function vader {
     Get-ChildItem   
 }
 
-$reboot = "YES"
+$reboot = "unknown"
 
 function DisplayMenu {
     Clear-Host
     Write-Host @"
     +
+    +
     +    REBOOT REQUIRED: $reboot
     +
-    @"
-
-    Write-Host @"
+    +
     +===============================================+
-    |  AOB POWERSHELL CONSOLE                  | 
+    |  AOB POWERSHELL CONSOLE   
+    REBOOT REQUIRED: $reboot               | 
     +===============================================+
     |                                               |
     |    1) Install Window's Updater
