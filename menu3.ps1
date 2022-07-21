@@ -16,11 +16,13 @@ function vader {
     Get-ChildItem   
 }
 
+$reboot = YES
+
 function DisplayMenu {
     Clear-Host
     Write-Host @"
     +===============================================+
-    |  AOB POWERSHELL CONSOLE                       | 
+    |  AOB POWERSHELL CONSOLE    $reboot                    | 
     +===============================================+
     |                                               |
     |    1) Install Window's Updater
@@ -41,6 +43,34 @@ function DisplayMenu {
     AOB-Install-WindowsUpdate
     Start-Sleep -Seconds 2
     DisplayMenu
+    }
+    2 {
+    #OPTION2 - DISPLAY MESSAGE
+    $OPTION2 = Read-Host "MESSAGE"
+    Write-Host "MESSAGE: $OPTION2"
+    Start-Sleep -Seconds 2
+    DisplayMenu
+    }
+    3 {
+    #OPTION2 - DISPLAY MESSAGE
+    $OPTION2 = Read-Host "MESSAGE"
+    Write-Host "MESSAGE: $OPTION2"
+    Start-Sleep -Seconds 2
+    DisplayMenu
+    }
+    4 {
+    #OPTION2 - DISPLAY MESSAGE
+    $OPTION2 = Read-Host "MESSAGE"
+    Write-Host "MESSAGE: $OPTION2"
+    Start-Sleep -Seconds 2
+    DisplayMenu
+     }
+    5 {
+    #OPTION2 - DISPLAY MESSAGE
+    $OPTION2 = Read-Host "MESSAGE"
+    Write-Host "MESSAGE: $OPTION2"
+    Start-Sleep -Seconds 2
+                    DisplayMenu
     }
     2 {
     #OPTION2 - DISPLAY MESSAGE
