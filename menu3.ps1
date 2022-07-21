@@ -79,7 +79,8 @@ function DisplayMenu {
     }
     4 {
     #OPTION4 - INSTALL GOOGLE CHROME
-    $OPTION2 = AOB-Install-GoogleChrome
+    Write-Host "Installing Chrome"
+    $OPTION4 = AOB-Install-GoogleChrome
     # delete - Write-Host "MESSAGE: $OPTION2"
     Start-Sleep -Seconds 2
     DisplayMenu
