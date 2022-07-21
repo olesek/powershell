@@ -1,11 +1,23 @@
+# This script originated from:
+# https://techexpert.tips/powershell/powershell-creating-user-menu/
+
+function vader {
+    Get-ChildItem
+    param (
+        OptionalParameters
+    )
+    
+}
+
 function DisplayMenu {
     Clear-Host
     Write-Host @"
     +===============================================+
-    |  POWERSHELL CONSOLE - USER MENU               | 
+    |  AOB POWERSHELL CONSOLE                       | 
     +===============================================+
     |                                               |
-    |    1) PING                                    |
+    |    1) Install Window's Updater
+            ( (this option only need to be run 1 time))
     |    2) DISPLAY MESSAGE                         |
     |    3) EXIT                                    |
     +===============================================+
@@ -18,7 +30,8 @@ function DisplayMenu {
     1 {
     #OPTION1 - PING
     $OPTION1 = Read-Host "HOST"
-    Test-Connection -ComputerName $OPTION1
+    # Test-Connection -ComputerName $OPTION1
+    vader
     Start-Sleep -Seconds 2
     DisplayMenu
     }
