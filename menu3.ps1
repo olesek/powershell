@@ -33,7 +33,7 @@ function DisplayMenu {
     {
     1 {
     #OPTION1 - PING
-    $OPTION1 = Read-Host "HOST"
+    $OPTION1 = vader
     # Test-Connection -ComputerName $OPTION1
     vader
     Start-Sleep -Seconds 2
