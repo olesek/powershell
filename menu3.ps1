@@ -9,8 +9,8 @@ function DisplayMenu {
     |    2) DISPLAY MESSAGE                         |
     |    3) EXIT                                    |
     +===============================================+
-    
-    "@
+
+"@
     
     $MENU = Read-Host "OPTION"
     Switch ($MENU)
