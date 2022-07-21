@@ -47,7 +47,7 @@ function DisplayMenu {
     Switch ($MENU)
     {
     1 {
-    #OPTION1 - PING
+    #OPTION1 - INSTALL WINDOW'S UPDATER
     $OPTION1 = AOB-Install-WindowsUpdate
     # Test-Connection -ComputerName $OPTION1
     AOB-Install-WindowsUpdate
@@ -55,49 +55,49 @@ function DisplayMenu {
     DisplayMenu
     }
     2 {
-    #OPTION2 - DISPLAY MESSAGE
+    #OPTION2 - RUN WINDOW'S UPDATER
     $OPTION2 = AOB-Update-Windows
     # Write-Host "MESSAGE: $OPTION2"
     Start-Sleep -Seconds 2
     DisplayMenu
     }
     3 {
-    #OPTION2 - DISPLAY MESSAGE
+    #OPTION3 - SET PC NAME & TIME ZONE
     $OPTION2 = Read-Host "MESSAGE"
     Write-Host "MESSAGE: $OPTION2"
     Start-Sleep -Seconds 2
     DisplayMenu
     }
     4 {
-    #OPTION2 - DISPLAY MESSAGE
+    #OPTION4 - INSTALL GOOGLE CHROME
     $OPTION2 = Read-Host "MESSAGE"
     Write-Host "MESSAGE: $OPTION2"
     Start-Sleep -Seconds 2
     DisplayMenu
      }
     5 {
-    #OPTION2 - DISPLAY MESSAGE
+    #OPTION5 - EMPTY
     $OPTION2 = Read-Host "MESSAGE"
     Write-Host "MESSAGE: $OPTION2"
     Start-Sleep -Seconds 2
                     DisplayMenu
     }
     6 {
-    #OPTION2 - DISPLAY MESSAGE
+    #OPTION6 - EMPTY
     $OPTION2 = Read-Host "MESSAGE"
     Write-Host "MESSAGE: $OPTION2"
     Start-Sleep -Seconds 2
     DisplayMenu
     }
     7 {
-    #OPTION2 - DISPLAY MESSAGE
+    #OPTION7 - DEBUG
     $OPTION2 = type c:\ps\menu3.ps1
     Write-Host "MESSAGE: $OPTION2"
     Start-Sleep -Seconds 2
     DisplayMenu
     }
     8 {
-    #OPTION3 - EXIT
+    #OPTION8 - EXIT
     Write-Host "Bye"
     Break
     }
