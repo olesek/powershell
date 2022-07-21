@@ -1,4 +1,4 @@
-// Last modified: 2022/07/21 14:05:17
+// Last modified: 2022/07/21 14:08:51
 
 # This script originated from:
 # https://techexpert.tips/powershell/powershell-creating-user-menu/
@@ -71,10 +71,11 @@ function DisplayMenu {
     |    4) INSTALL GOOGLE CHROME                     |
     |    5)                                           |
     |    6)                                           |
-    |    7) DEBUG - type this file                    |
+    |    7) UPGRADE THIS SCRIPT                 |
     |    8) EXIT                                      |
     +=================================================+
 "@
+Write-Host Last modified
     
     $MENU = Read-Host "OPTION"
     Switch ($MENU) {
