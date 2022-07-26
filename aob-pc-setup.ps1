@@ -1,4 +1,4 @@
-// Last modified: 2022/07/21 15:46:22
+// Last modified: 2022/07/26 17:23:29
 
 # This script originated from:
 # https://techexpert.tips/powershell/powershell-creating-user-menu/
@@ -14,6 +14,7 @@ function AOB-Install-WindowsUpdate {
     Get-Command -Module PSWindowsUpdate
     Get-WindowsUpdate
 }
+
 function AOB-Update-Windows {
     # Update PC - these commands only need to be run 1 time
     Get-WindowsUpdate
@@ -25,8 +26,6 @@ function AOB-Install-GoogleChrome {
     Invoke-WebRequest -uri 'http://dl.google.com/chrome/install/375.126/chrome_installer.exe' -OutFile "C:\ps\chrome_installer.exe"
     Start-Process "C:\ps\chrome_installer.exe" -ArgumentList "/silent /install" -Wait
 }
-
-
 
 function AOB-Install-GCPW {
     wget "https://raw.githubusercontent.com/olesek/powershell/main/aob-gcpw.ps1" -outfile "c:\ps\aob-gcpw.ps1";cd c:\ps;./aob-gcpw.ps1
