@@ -1,4 +1,5 @@
-// Last modified: 2022/07/26 18:26:27
+// Last modified: 2022/07/26 18:59:53
+$lastmodified = // Last modified
 
 # This script originated from:
 # https://techexpert.tips/powershell/powershell-creating-user-menu/
@@ -76,7 +77,7 @@ function DisplayMenu {
     |    8) EXIT                                               |
     +==========================================================+
 "@
-Write-Host Last modified
+Write-Host $lastmodified
     
     $MENU = Read-Host "OPTION"
     Switch ($MENU) {
