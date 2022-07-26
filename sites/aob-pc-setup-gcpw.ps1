@@ -1,4 +1,4 @@
-// Last modified: 2022/07/26 18:20:12
+// Last modified: 2022/07/26 19:04:16
 Write-Host Last modified
 
 # This script originated from:
@@ -57,7 +57,7 @@ function DisplayMenu {
     +==========================================================+
     | Choose the school you would like to install GCPW for:          
                                                     |
-    |    1) St. John regional Catholic School                  |
+    |    1) St. John Regional Catholic School                  |
     |    2) Monsignor Slade Catholic School                              |
     |    3) St. Philip Neri Catholic School                           |
     |    4) INSTALL GOOGLE CHROME                              |
@@ -75,7 +75,7 @@ Write-Host Last modified
         1 {
             # Install GCPW - St. John Regional Catholic School
             $OPTION1 = AOB-Install-GCPW-sjrcs
-            
+            Write-Host "You are installing GCPW on this PC for St. John Regional Catholic School"
             AOB-Install-GCPW-sjrcs
             Start-Sleep -Seconds 2
             DisplayMenu
