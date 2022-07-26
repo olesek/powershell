@@ -1,0 +1,5 @@
+Windows Registry Editor Version 5.00
+
+; Set up the enrollment token for GCPW.
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Google\CloudManagement]
+"EnrollmentToken"="daefe143-b3e0-4e85-9536-ea52dff8654f"
