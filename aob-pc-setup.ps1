@@ -1,4 +1,4 @@
-// Last modified: 2022/07/26 18:59:53
+// Last modified: 2022/07/26 19:07:00
 $lastmodified = // Last modified
 
 # This script originated from:
@@ -77,7 +77,7 @@ function DisplayMenu {
     |    8) EXIT                                               |
     +==========================================================+
 "@
-Write-Host $lastmodified
+Write-Host // Last modified: 2022/07/26 18:59:53
     
     $MENU = Read-Host "OPTION"
     Switch ($MENU) {
