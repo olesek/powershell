@@ -1,4 +1,4 @@
-// Last modified: 2022/07/26 17:34:00
+// Last modified: 2022/07/26 18:26:27
 
 # This script originated from:
 # https://techexpert.tips/powershell/powershell-creating-user-menu/
@@ -31,6 +31,12 @@ function AOB-Install-GCPW {
     wget "https://raw.githubusercontent.com/olesek/powershell/main/aob-gcpw.ps1" -outfile "c:\ps\aob-gcpw.ps1";cd c:\ps;./aob-gcpw.ps1
 }
 
+
+# Call GCPW Menu
+function AOB-Install-GCPW {
+    wget "https://raw.githubusercontent.com/olesek/powershell/main/sites/aob-pc-setup-gcpw.ps1" -outfile "c:\ps\aob-pc-setup-gcpw.ps1";cd c:\ps;./aob-pc-setup-gcpw.ps1
+
+}
 function Set-PC-Name-and-TimeZone {
     # Set PC Name
     $pcname = Read-Host "Enter PC Name"
