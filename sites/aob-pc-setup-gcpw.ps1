@@ -1,4 +1,5 @@
-// Last modified: 2022/07/26 17:34:00
+// Last modified: 2022/07/26 18:20:12
+Write-Host Last modified
 
 # This script originated from:
 # https://techexpert.tips/powershell/powershell-creating-user-menu/
@@ -6,30 +7,25 @@
 wget "https://raw.githubusercontent.com/olesek/powershell/main/aob-pc-setup.ps1" -outfile "c:\ps\aob-pc-setup.ps1"
 #>
 
-function AOB-Install-WindowsUpdate {
-    # Update PC - these commands only need to be run 1 time
-    Install-PackageProvider -Name NuGet -Force
-    Install-Module -Name PSWindowsUpdate -Force
-    Import-Module PSWindowsUpdate
-    Get-Command -Module PSWindowsUpdate
-    Get-WindowsUpdate
-}
 
 function AOB-Update-Windows {
     # Update PC - these commands only need to be run 1 time
     Get-WindowsUpdate
 }
 
-function AOB-Install-GoogleChrome {
-    #    New-Item -Path 'c:\ps' -ItemType Directory
-    #    Set-Location c:\ps
-    Invoke-WebRequest -uri 'http://dl.google.com/chrome/install/375.126/chrome_installer.exe' -OutFile "C:\ps\chrome_installer.exe"
-    Start-Process "C:\ps\chrome_installer.exe" -ArgumentList "/silent /install" -Wait
+
+
+# Install GCPW - St. John Regional Catholic School
+function AOB-Install-GCPW-sjrcs {
+    wget "https://raw.githubusercontent.com/olesek/powershell/main/sites/sjrcs/gcpwstandaloneenterprise64.exe" -outfile "c:\ps\gcpwstandaloneenterprise64.exe";cd c:\ps;./gcpwstandaloneenterprise64.exe
 }
 
-function AOB-Install-GCPW {
-    wget "https://raw.githubusercontent.com/olesek/powershell/main/aob-gcpw.ps1" -outfile "c:\ps\aob-gcpw.ps1";cd c:\ps;./aob-gcpw.ps1
-}
+
+<#
+https://github.com/olesek/powershell/tree/main/sites/sjrcs
+#>
+
+
 
 function Set-PC-Name-and-TimeZone {
     # Set PC Name
@@ -55,14 +51,15 @@ function DisplayMenu {
     Write-Host @"
   
     +==========================================================+
-    |             AOB POWERSHELL CONSOLE                       |
-    |            REBOOT REQUIRED: $reboot                      |
+    |AOB POWERSHELL CONSOLE
+    | Google Credential Provider for Windows (GCPW)                       |
+    |                           |
     +==========================================================+
-    |                                                          |
-    |    1) INSTALL WINDOW'S UPDATER                           |
-    |       (this option only needs to be run 1 time)          |
-    |    2) RUN WINDOW'S UPDATER                               |
-    |    3) SET PC NAME & TIME ZONE                            |
+    | Choose the school you would like to install GCPW for:          
+                                                    |
+    |    1) St. John regional Catholic School                  |
+    |    2) Monsignor Slade Catholic School                              |
+    |    3) St. Philip Neri Catholic School                           |
     |    4) INSTALL GOOGLE CHROME                              |
     |    5) INSTALL GOOGLE CREDENTIAL PROVIDER FOR WINDOWS     |
     |    6)                                                    |
@@ -71,14 +68,15 @@ function DisplayMenu {
     +==========================================================+
 "@
 Write-Host Last modified
+Write-Host Last modified
     
     $MENU = Read-Host "OPTION"
     Switch ($MENU) {
         1 {
-            #OPTION1 - INSTALL WINDOW'S UPDATER
-            $OPTION1 = AOB-Install-WindowsUpdate
-            # Test-Connection -ComputerName $OPTION1
-            AOB-Install-WindowsUpdate
+            # Install GCPW - St. John Regional Catholic School
+            $OPTION1 = AOB-Install-GCPW-sjrcs
+            
+            AOB-Install-GCPW-sjrcs
             Start-Sleep -Seconds 2
             DisplayMenu
         }
