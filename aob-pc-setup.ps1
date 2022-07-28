@@ -1,10 +1,21 @@
-// Last modified: 2022/07/28 10:10:11
+// Last modified: 2022/07/28 10:15:53
 
 
 # This script originated from:
 # https://techexpert.tips/powershell/powershell-creating-user-menu/
 <#
 wget "https://raw.githubusercontent.com/olesek/powershell/main/aob-pc-setup.ps1" -outfile "c:\ps\aob-pc-setup.ps1"
+#>
+
+
+<## Update PC
+Install-PackageProvider -Name NuGet -Force
+Install-Module -Name PSWindowsUpdate -Force
+Import-Module PSWindowsUpdate
+Get-Command -Module PSWindowsUpdate
+Get-WindowsUpdate
+Get-WURebootStatus
+Install-WindowsUpdate -AcceptAll -AutoReboot
 #>
 
 function AOB-Install-WindowsUpdate {
@@ -19,6 +30,8 @@ function AOB-Install-WindowsUpdate {
 function AOB-Update-Windows {
     # Update PC - these commands only need to be run 1 time
     Get-WindowsUpdate
+    Get-WURebootStatus
+    Install-WindowsUpdate -AcceptAll -AutoReboot
 }
 
 function AOB-Install-GoogleChrome {
@@ -131,7 +144,7 @@ Write-Host // Last modified: 2022/07/26 18:59:53
         7 {
             #OPTION7 - UPGRADE THIS SCRIPT
             $OPTION7 = wget "https://raw.githubusercontent.com/olesek/powershell/main/aob-pc-setup.ps1" -outfile "c:\ps\aob-pc-setup.ps1";c:\ps\./aob-pc-setup.ps1
-            Start-Sleep -Seconds 10
+            Start-Sleep -Seconds 2
             DisplayMenu
         }
         8 {
