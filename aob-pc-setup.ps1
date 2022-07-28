@@ -1,4 +1,4 @@
-// Last modified: 2022/07/26 20:49:41
+// Last modified: 2022/07/28 10:10:11
 
 
 # This script originated from:
@@ -90,9 +90,10 @@ Write-Host // Last modified: 2022/07/26 18:59:53
             DisplayMenu
         }
         2 {
-            #OPTION2 - RUN WINDOW'S UPDATER
-            $OPTION2 = AOB-Update-Windows
-            # Write-Host "MESSAGE: $OPTION2"
+            # OPTION2 - RUN WINDOW'S UPDATER
+            # $OPTION2 = AOB-Update-Windows
+            Write-Host "Checking & Installing Window's Updates"
+            AOB-Update-Windows
             Start-Sleep -Seconds 2
             DisplayMenu
         }
