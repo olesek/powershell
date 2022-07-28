@@ -1,4 +1,4 @@
-// Last modified: 2022/07/28 10:40:18
+// Last modified: 2022/07/28 10:46:10
 
 # This script originated from:
 # https://techexpert.tips/powershell/powershell-creating-user-menu/
@@ -8,6 +8,10 @@ wget "https://raw.githubusercontent.com/olesek/powershell/main/aob-pc-setup.ps1"
 
 # This function will install the Windows update functionality
 # These commands only need to be run 1 time
+
+# Set AOB(aob) alias to run this script
+Set-Alias aob c:\ps\aob-pc-setup.ps1
+
 function AOB-Install-WindowsUpdate {
     Install-PackageProvider -Name NuGet -Force
     Install-Module -Name PSWindowsUpdate -Force
