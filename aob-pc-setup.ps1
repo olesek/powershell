@@ -1,4 +1,4 @@
-// Last modified: 2022/07/28 10:46:10
+// Last modified: 2022/07/28 11:04:22
 
 # This script originated from:
 # https://techexpert.tips/powershell/powershell-creating-user-menu/
@@ -10,7 +10,10 @@ wget "https://raw.githubusercontent.com/olesek/powershell/main/aob-pc-setup.ps1"
 # These commands only need to be run 1 time
 
 # Set AOB(aob) alias to run this script
-Set-Alias aob c:\ps\aob-pc-setup.ps1
+# Based on: https://frankie95.medium.com/set-alias-command-in-powershell-to-make-your-life-easier-61de600c18d2
+New-Item c:\users\techadmin\documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
+Set-Content c:\users\techadmin\documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1 "Set-Alias aob c:\ps\aob-pc-setup.ps1"
+
 
 function AOB-Install-WindowsUpdate {
     Install-PackageProvider -Name NuGet -Force
@@ -80,7 +83,7 @@ function DisplayMenu {
     |    4) INSTALL GOOGLE CHROME                              |
     |    5) INSTALL GOOGLE CREDENTIAL PROVIDER FOR WINDOWS     |
     |    6)                                                    |
-    |    7) UPGRADE THIS SCRIPT                                |
+    |    7) UPGRADE & RELOAD THIS SCRIPT                       |
     |    8) EXIT                                               |
     +==========================================================+
 "@
