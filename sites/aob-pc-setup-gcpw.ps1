@@ -1,4 +1,4 @@
-// Last modified: 2022/08/29 09:08:15
+// Last modified: 2022/08/29 09:44:45
 Write-Host Last modified
 
 # This script originated from:
@@ -56,20 +56,22 @@ function DisplayMenu {
     Write-Host @"
   
     +==========================================================+
-    |AOB POWERSHELL CONSOLE
-    | Google Credential Provider for Windows (GCPW)                       |
-    |                           |
+    |                                                          |
+    |  Install Google Credential Provider for Windows (GCPW)   |
+    |                                                          |
     +==========================================================+
-    | Choose the school you would like to install GCPW for:          
-                                                    |
-    |    1) St. John Regional Catholic School                  |
-    |    2) Monsignor Slade Catholic School                              |
-    |    3) St. Philip Neri Catholic School                           |
-    |    4) St. Mark School                      |
-    |    5) INSTALL GOOGLE CREDENTIAL PROVIDER FOR WINDOWS     |
+    |          Choose a school for GCPW installation:          |
+    |                                                          |
+    |    1) *Monsignor Slade Catholic School                   |
+    |    2) St. John Regional                                  |
+    |    3) St. Mark School                                    |
+    |    4) *St. Philip Neri                                   |
+    |    5)                                                    |
     |    6)                                                    |
-    |    7) UPGRADE THIS SCRIPT                                |
-    |    8) EXIT                                               |
+    |    7)                                                    |
+    |    8) RETURN TO MAIN MENU                                |
+    |                                                          |              
+    |    * = GCPW script insallation not currently avaible     |
     +==========================================================+
 "@
 Write-Host Last modified
@@ -78,34 +80,26 @@ Write-Host Last modified
     $MENU = Read-Host "OPTION"
     Switch ($MENU) {
         1 {
-            # Install GCPW - St. John Regional Catholic School
-            $OPTION1 = AOB-Install-GCPW-sjrcs
-            Write-Host "You are installing GCPW on this PC for St. John Regional Catholic School"
-            AOB-Install-GCPW-sjrcs
-            Start-Sleep -Seconds 2
-            DisplayMenu
+          
         }
         2 {
-            #OPTION2 - RUN WINDOW'S UPDATER
-            $OPTION2 = AOB-Update-Windows
-            # Write-Host "MESSAGE: $OPTION2"
-            Start-Sleep -Seconds 2
-            DisplayMenu
+              # Install GCPW - St. John Regional Catholic School
+              $OPTION1 = AOB-Install-GCPW-sjrcs
+              Write-Host "You are installing GCPW on this PC for St. John Regional Catholic School"
+              AOB-Install-GCPW-sjrcs
+              Start-Sleep -Seconds 2
+              DisplayMenu
         }
         3 {
-            #OPTION3 - SET PC NAME & TIME ZONE
-            Write-Host "Setting PC Name and TimeZone"
-            $OPTION3 = Set-PC-Name-and-TimeZone
+            # Install GCPW - St. Mark School
+            $OPTION4 = AOB-Install-GCPW-st-mark
+            Write-Host "You are installing GCPW on this PC for St. Mark Catholic School"
+            AOB-Install-GCPW-st-mark
             Start-Sleep -Seconds 2
             DisplayMenu
         }
         4 {
-             # Install GCPW - St. Mark School
-             $OPTION4 = AOB-Install-GCPW-st-mark
-             Write-Host "You are installing GCPW on this PC for St. Mark Catholic School"
-             AOB-Install-GCPW-st-mark
-             Start-Sleep -Seconds 2
-             DisplayMenu
+            
         }
         5 {
             #OPTION5 - INSTALL GOOGLE CREDENTIAL PROVIDER FOR WINDOWS
@@ -124,10 +118,7 @@ Write-Host Last modified
             DisplayMenu
         }
         7 {
-            #OPTION7 - UPGRADE THIS SCRIPT
-            $OPTION7 = wget "https://raw.githubusercontent.com/olesek/powershell/main/aob-pc-setup.ps1" -outfile "c:\ps\aob-pc-setup.ps1";c:\ps\./aob-pc-setup.ps1
-            Start-Sleep -Seconds 10
-            DisplayMenu
+           
         }
         8 {
             #OPTION8 - EXIT
