@@ -1,4 +1,4 @@
-// Last modified: 2022/07/28 13:54:05
+// Last modified: 2022/08/29 09:51:14
 
 # This script originated from:
 # https://techexpert.tips/powershell/powershell-creating-user-menu/
@@ -85,6 +85,8 @@ function DisplayMenu {
     |    6)                                                    |
     |    7) UPGRADE & RELOAD THIS SCRIPT                       |
     |    8) EXIT                                               |
+    |    9) Reboot PC                                          |
+    |                                                          |
     +==========================================================+
 "@
 Write-Host // Last modified: 2022/07/26 18:59:53
@@ -148,6 +150,10 @@ Write-Host // Last modified: 2022/07/26 18:59:53
             #OPTION8 - EXIT
             Write-Host "Bye"
             Break
+        }
+        9 {
+            #OPTION8 - EXIT
+            Restart-Computer
         }
         default {
             #DEFAULT OPTION
