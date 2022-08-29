@@ -1,4 +1,4 @@
-// Last modified: 2022/07/26 19:04:16
+// Last modified: 2022/08/29 09:08:15
 Write-Host Last modified
 
 # This script originated from:
@@ -18,6 +18,11 @@ function AOB-Update-Windows {
 # Install GCPW - St. John Regional Catholic School
 function AOB-Install-GCPW-sjrcs {
     wget "https://raw.githubusercontent.com/olesek/powershell/main/sites/sjrcs/gcpwstandaloneenterprise64.exe" -outfile "c:\ps\gcpwstandaloneenterprise64.exe";cd c:\ps;./gcpwstandaloneenterprise64.exe
+}
+
+# Install GCPW - St. Mark School
+function AOB-Install-GCPW-st-mark {
+    wget "https://raw.githubusercontent.com/olesek/powershell/main/sites/st-mark/gcpwstandaloneenterprise64.exe" -outfile "c:\ps\gcpwstandaloneenterprise64.exe";cd c:\ps;./gcpwstandaloneenterprise64.exe
 }
 
 
@@ -60,7 +65,7 @@ function DisplayMenu {
     |    1) St. John Regional Catholic School                  |
     |    2) Monsignor Slade Catholic School                              |
     |    3) St. Philip Neri Catholic School                           |
-    |    4) INSTALL GOOGLE CHROME                              |
+    |    4) St. Mark School                      |
     |    5) INSTALL GOOGLE CREDENTIAL PROVIDER FOR WINDOWS     |
     |    6)                                                    |
     |    7) UPGRADE THIS SCRIPT                                |
@@ -95,12 +100,12 @@ Write-Host Last modified
             DisplayMenu
         }
         4 {
-            #OPTION4 - INSTALL GOOGLE CHROME
-            Write-Host "Installing Chrome"
-            $OPTION4 = AOB-Install-GoogleChrome
-            # delete - Write-Host "MESSAGE: $OPTION2"
-            Start-Sleep -Seconds 2
-            DisplayMenu
+             # Install GCPW - St. Mark School
+             $OPTION4 = AOB-Install-GCPW-st-mark
+             Write-Host "You are installing GCPW on this PC for St. Mark Catholic School"
+             AOB-Install-GCPW-st-mark
+             Start-Sleep -Seconds 2
+             DisplayMenu
         }
         5 {
             #OPTION5 - INSTALL GOOGLE CREDENTIAL PROVIDER FOR WINDOWS
