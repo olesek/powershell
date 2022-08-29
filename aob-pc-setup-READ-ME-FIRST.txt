@@ -13,8 +13,8 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned;mkdir c:\ps;cd c:\ps;wget "htt
 
 ************************************************************************
 *                                                                      *
-*                 --- TO RE-LAUNCH INSTALLATION MENU ---               *
-*            (Launch PowerShell in Administrtor Mode)                  *
+*               --- TO RE-LAUNCH INSTALLATION MENU ---                 *
+*              (Launch PowerShell in Administrtor Mode)                *
 *                                                                      *
 ************************************************************************
 
