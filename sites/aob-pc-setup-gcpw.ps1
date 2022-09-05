@@ -1,4 +1,4 @@
-// Last modified: 2022/08/29 09:46:53
+// Last modified: 2022/09/05 16:37:06
 Write-Host Last modified
 
 # This script originated from:
@@ -13,6 +13,11 @@ function AOB-Update-Windows {
     Get-WindowsUpdate
 }
 
+
+# Install GCPW - Monsignor Slade Catholic School
+function AOB-Install-GCPW-slade {
+    wget "https://raw.githubusercontent.com/olesek/powershell/main/sites/slade/gcpwstandaloneenterprise64.exe" -outfile "c:\ps\gcpwstandaloneenterprise64.exe";cd c:\ps;./gcpwstandaloneenterprise64.exe
+}
 
 
 # Install GCPW - St. John Regional Catholic School
@@ -80,19 +85,24 @@ Write-Host Last modified
     $MENU = Read-Host "OPTION"
     Switch ($MENU) {
         1 {
-          
+            # Install GCPW - Monsignor Slade Catholic School 
+            $OPTION1 = AOB-Install-GCPW-slade
+            Write-Host "You are installing GCPW on this PC for Monsignor Slade Catholic School "
+            AOB-Install-GCPW-slade
+            Start-Sleep -Seconds 2
+            DisplayMenu
         }
         2 {
-              # Install GCPW - St. John Regional Catholic School
-              $OPTION1 = AOB-Install-GCPW-sjrcs
-              Write-Host "You are installing GCPW on this PC for St. John Regional Catholic School"
-              AOB-Install-GCPW-sjrcs
-              Start-Sleep -Seconds 2
-              DisplayMenu
+            # Install GCPW - St. John Regional Catholic School
+            $OPTION2 = AOB-Install-GCPW-sjrcs
+            Write-Host "You are installing GCPW on this PC for St. John Regional Catholic School"
+            AOB-Install-GCPW-sjrcs
+            Start-Sleep -Seconds 2
+            DisplayMenu
         }
         3 {
             # Install GCPW - St. Mark School
-            $OPTION4 = AOB-Install-GCPW-st-mark
+            $OPTION3 = AOB-Install-GCPW-st-mark
             Write-Host "You are installing GCPW on this PC for St. Mark Catholic School"
             AOB-Install-GCPW-st-mark
             Start-Sleep -Seconds 2
