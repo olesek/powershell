@@ -1,5 +1,5 @@
 NOTE:
-1) Launch PowerShell running in Administrtor Mode.
+1) Launch PowerShell running in Administrator Mode.
 2) Copy and Paste the commands from below - answer "A" when it prompts you for permission.
 
 ************************************************************************
@@ -14,7 +14,7 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned;mkdir c:\ps;cd c:\ps;wget "htt
 ************************************************************************
 *                                                                      *
 *               --- TO RE-LAUNCH INSTALLATION MENU ---                 *
-*              (Launch PowerShell in Administrtor Mode)                *
+*              (Launch PowerShell in Administrator Mode)                *
 *                                                                      *
 ************************************************************************
 
