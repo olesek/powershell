@@ -1,4 +1,4 @@
-// Last modified: 2022/09/05 16:37:06
+// Last modified: 2022/09/07 20:11:23
 Write-Host Last modified
 
 # This script originated from:
@@ -67,9 +67,9 @@ function DisplayMenu {
     +==========================================================+
     |          Choose a school for GCPW installation:          |
     |                                                          |
-    |    1) * Monsignor Slade Catholic School                  |
+    |    1) Monsignor Slade Catholic School                    |
     |    2) St. John Regional                                  |
-    |    3) St. Mark School                                    |3
+    |    3) St. Mark School                                    |
     |    4) * St. Philip Neri                                  |
     |    5)                                                    |
     |    6)                                                    |
