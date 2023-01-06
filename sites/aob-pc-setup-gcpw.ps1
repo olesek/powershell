@@ -1,4 +1,4 @@
-// Last modified: 2022/09/07 20:11:23
+// Last modified: 2023/01/06 09:18:07
 Write-Host Last modified
 
 # This script originated from:
@@ -30,6 +30,10 @@ function AOB-Install-GCPW-st-mark {
     wget "https://raw.githubusercontent.com/olesek/powershell/main/sites/st-mark/gcpwstandaloneenterprise64.exe" -outfile "c:\ps\gcpwstandaloneenterprise64.exe";cd c:\ps;./gcpwstandaloneenterprise64.exe
 }
 
+# Install GCPW - St. Ursula School
+function AOB-Install-GCPW-st-ursula {
+    wget "https://raw.githubusercontent.com/olesek/powershell/main/sites/st-ursula/gcpwstandaloneenterprise64.exe" -outfile "c:\ps\gcpwstandaloneenterprise64.exe";cd c:\ps;./gcpwstandaloneenterprise64.exe
+}
 
 <#
 https://github.com/olesek/powershell/tree/main/sites/sjrcs
@@ -71,7 +75,7 @@ function DisplayMenu {
     |    2) St. John Regional                                  |
     |    3) St. Mark School                                    |
     |    4) * St. Philip Neri                                  |
-    |    5)                                                    |
+    |    5) St. Ursula                                                   |
     |    6)                                                    |
     |    7)                                                    |
     |    8) RETURN TO MAIN MENU                                |
@@ -111,12 +115,11 @@ Write-Host Last modified
         4 {
             
         }
-        5 {
-            #OPTION5 - INSTALL GOOGLE CREDENTIAL PROVIDER FOR WINDOWS
-            # $OPTION5 = Read-Host "MESSAGE"
-            Write-Host "Installing Google Credential Provider for Windows"
-            Start-Sleep -Seconds 2
-            AOB-Install-GCPW
+        5  {
+            # Install GCPW - St. Ursula School
+            $OPTION3 = AOB-Install-GCPW-st-ursula
+            Write-Host "You are installing GCPW on this PC for St. Ursula Catholic School"
+            AOB-Install-GCPW-st-ursula
             Start-Sleep -Seconds 2
             DisplayMenu
         }
