@@ -1,4 +1,4 @@
-// Last modified: 2023/01/06 09:18:07
+// Last modified: 2023/01/08 12:37:08
 Write-Host Last modified
 
 # This script originated from:
@@ -75,7 +75,7 @@ function DisplayMenu {
     |    2) St. John Regional                                  |
     |    3) St. Mark School                                    |
     |    4) * St. Philip Neri                                  |
-    |    5) St. Ursula                                                   |
+    |    5) St. Ursula                                         |
     |    6)                                                    |
     |    7)                                                    |
     |    8) RETURN TO MAIN MENU                                |
@@ -119,7 +119,7 @@ Write-Host Last modified
             # Install GCPW - St. Ursula School
             $OPTION3 = AOB-Install-GCPW-st-ursula
             Write-Host "You are installing GCPW on this PC for St. Ursula Catholic School"
-            AOB-Install-GCPW-st-ursula
+            # AOB-Install-GCPW-st-ursula
             Start-Sleep -Seconds 2
             DisplayMenu
         }
