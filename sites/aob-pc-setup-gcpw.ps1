@@ -1,4 +1,4 @@
-// Last modified: 2023/01/11 10:37:05
+// Last modified: 2023/01/11 11:54:33
 Write-Host Last modified
 
 # This script originated from:
@@ -121,7 +121,7 @@ Write-Host Last modified
             $OPTION3 = AOB-Install-GCPW-st-philip
             Write-Host "You are installing GCPW on this PC for St. Philip Neri Catholic School"
             # AOB-Install-GCPW-st-philip
-            Start-Sleep -Seconds 2
+            Start-Sleep -Seconds 7
             DisplayMenu
             
         }
