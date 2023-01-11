@@ -1,4 +1,4 @@
-// Last modified: 2023/01/08 12:37:08
+// Last modified: 2023/01/11 10:37:05
 Write-Host Last modified
 
 # This script originated from:
@@ -28,6 +28,11 @@ function AOB-Install-GCPW-sjrcs {
 # Install GCPW - St. Mark School
 function AOB-Install-GCPW-st-mark {
     wget "https://raw.githubusercontent.com/olesek/powershell/main/sites/st-mark/gcpwstandaloneenterprise64.exe" -outfile "c:\ps\gcpwstandaloneenterprise64.exe";cd c:\ps;./gcpwstandaloneenterprise64.exe
+}
+
+# Install GCPW - St. Philip Neri School
+function AOB-Install-GCPW-st-philip {
+    wget "https://raw.githubusercontent.com/olesek/powershell/main/sites/st-phili/gcpwstandaloneenterprise64.exe" -outfile "c:\ps\gcpwstandaloneenterprise64.exe";cd c:\ps;./gcpwstandaloneenterprise64.exe
 }
 
 # Install GCPW - St. Ursula School
@@ -74,7 +79,7 @@ function DisplayMenu {
     |    1) Monsignor Slade Catholic School                    |
     |    2) St. John Regional                                  |
     |    3) St. Mark School                                    |
-    |    4) * St. Philip Neri                                  |
+    |    4) St. Philip Neri                                    |
     |    5) St. Ursula                                         |
     |    6)                                                    |
     |    7)                                                    |
@@ -112,7 +117,12 @@ Write-Host Last modified
             Start-Sleep -Seconds 2
             DisplayMenu
         }
-        4 {
+        4 {# Install GCPW - St. Philip Neri School
+            $OPTION3 = AOB-Install-GCPW-st-philip
+            Write-Host "You are installing GCPW on this PC for St. Philip Neri Catholic School"
+            # AOB-Install-GCPW-st-philip
+            Start-Sleep -Seconds 2
+            DisplayMenu
             
         }
         5  {
