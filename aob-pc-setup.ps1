@@ -1,4 +1,4 @@
-// Last modified: 2022/08/29 09:51:14
+// Last modified: 2023/01/11 11:58:14
 
 # This script originated from:
 # https://techexpert.tips/powershell/powershell-creating-user-menu/
@@ -101,6 +101,7 @@ Write-Host // Last modified: 2022/07/26 18:59:53
             Start-Sleep -Seconds 2
             DisplayMenu
         }
+        
         2 {
             # OPTION2 - RUN WINDOW'S UPDATER
             # $OPTION2 = AOB-Update-Windows
