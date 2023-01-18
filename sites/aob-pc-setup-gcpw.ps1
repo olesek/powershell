@@ -1,4 +1,4 @@
-// Last modified: 2023/01/18 15:48:46
+// Last modified: 2023/01/18 16:03:45
 Write-Host Last modified
 
 # This script originated from:
@@ -32,7 +32,7 @@ function AOB-Install-GCPW-st-mark {
 
 # Install GCPW - St. Philip Neri School
 function AOB-Install-GCPW-st-philip {
-    wget "https://raw.githubusercontent.com/olesek/powershell/main/sites/st-phili/gcpwstandaloneenterprise64.exe" -outfile "c:\ps\gcpwstandaloneenterprise64.exe";cd c:\ps;./gcpwstandaloneenterprise64.exe
+    wget "https://raw.githubusercontent.com/olesek/powershell/main/sites/st-philip/gcpwstandaloneenterprise64.exe" -outfile "c:\ps\gcpwstandaloneenterprise64.exe";cd c:\ps;./gcpwstandaloneenterprise64.exe
 }
 
 # Install GCPW - St. Ursula School
