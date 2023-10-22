@@ -40,6 +40,11 @@ function AOB-Install-GCPW-st-ursula {
     wget "https://raw.githubusercontent.com/olesek/powershell/main/sites/st-ursula/gcpwstandaloneenterprise64.exe" -outfile "c:\ps\gcpwstandaloneenterprise64.exe";cd c:\ps;./gcpwstandaloneenterprise64.exe
 }
 
+# Install GCPW - St. John - Westminster
+function AOB-Install-GCPW-st-john-westminster {
+    wget "https://raw.githubusercontent.com/olesek/powershell/main/sites/st-ursula/gcpwstandaloneenterprise64.exe" -outfile "c:\ps\gcpwstandaloneenterprise64.exe";cd c:\ps;./gcpwstandaloneenterprise64.exe
+}
+
 <#
 https://github.com/olesek/powershell/tree/main/sites/sjrcs
 #>
@@ -81,7 +86,7 @@ function DisplayMenu {
     |    3) St. Mark School                                    |
     |    4) St. Philip Neri                                    |
     |    5) St. Ursula                                         |
-    |    6)                                                    |
+    |    6) St. John - Westminster                             |
     |    7)                                                    |
     |    8) RETURN TO MAIN MENU                                |
     |                                                          |              
@@ -134,9 +139,9 @@ Write-Host Last modified
             DisplayMenu
         }
         6 {
-            #OPTION6 - EMPTY
+            #Install GCPW - St. John - Westminster
             $OPTION2 = Read-Host "MESSAGE"
-            Write-Host "MESSAGE: $OPTION2"
+            Write-Host "You are installing GCPW on this PC for St. John - Westminster"
             Start-Sleep -Seconds 2
             DisplayMenu
         }
