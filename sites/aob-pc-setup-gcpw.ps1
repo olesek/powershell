@@ -42,7 +42,7 @@ function AOB-Install-GCPW-st-ursula {
 
 # Install GCPW - St. John - Westminster
 function AOB-Install-GCPW-st-john-westminster {
-    wget "https://raw.githubusercontent.com/olesek/powershell/main/sites/st-ursula/gcpwstandaloneenterprise64.exe" -outfile "c:\ps\gcpwstandaloneenterprise64.exe";cd c:\ps;./gcpwstandaloneenterprise64.exe
+    wget "https://raw.githubusercontent.com/olesek/powershell/main/sites/st-john-westminster/gcpwstandaloneenterprise64.exe" -outfile "c:\ps\gcpwstandaloneenterprise64.exe";cd c:\ps;./gcpwstandaloneenterprise64.exe
 }
 
 <#
